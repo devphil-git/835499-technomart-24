@@ -33,7 +33,7 @@
       <div>
         <div>
           <a class="username" href=""><img class="color" src="img/icon-user.svg" alt="">Равшан Джамшутович</a>
-          <a class="logout" href=""><img class="color" src="img/icon-logout.svg" alt=""></a>
+          <a class="logout" href=""><img class="color" src="img/icon-logout.svg" alt="Кнопка выход"></a>
         </div>
         <ul>
           <li><a href="">Мои заказы</a></li>
@@ -74,13 +74,54 @@
       <h1>Перфораторы</h1>
 
       <div class="filters">
-        <h2 class="visually-hidden">Фильтр:</h2>
-<!--    <form action="">
-          <input type="range" name="price">
-          <input type="range" name="manufacturers">
-          <input type="radio" name="power">
+        <h2 class="">Фильтр:</h2>
+        <form class="" method="get" action="https://echo.htmlacademy.ru">
+
+          <!-- <input type="" name="price"> //Фильтр по цене-->
+
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="bosch" id="bosch" checked>
+                <label for="bosch">Bosch</label>
+              </li>
+              <li>
+                <input type="checkbox" name="interskol" id="interskol">
+                <label for="interskol">Интерскол</label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="makita" checked>
+                <label for="makita">Makita</label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="dewalt">
+                <label for="dewalt">Dewalt</label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="hitachi">
+                <label for="hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="power" id="battery" checked>
+                <label for="battery">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="power" id="electric">
+                <label for="electric">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+
           <button type="submit">Показать</button>
-        </form>  -->
+
+        </form>
       </div>
 
       <section class="goods">
@@ -236,9 +277,9 @@
           Все права защищены
         </p>
         <ul class="social">
-          <li><a class="vk_button" href=""><img class="color" src="img/icon-vk.svg" alt="">ВКонтакте</a></li>
-          <li><a class="fb_button" href=""><img class="color" src="img/icon-fb.svg" alt="">Facebook</a></li>
-          <li><a class="ins_button" href=""><img class="color" src="img/icon-insta.svg" alt="">Instagram</a></li>
+          <li><a class="vk_button" href=""><img class="color" src="img/icon-vk.svg" alt="Техномарт во ВКонтакте">ВКонтакте</a></li>
+          <li><a class="fb_button" href=""><img class="color" src="img/icon-fb.svg" alt="Техномарт на Facebook">Facebook</a></li>
+          <li><a class="ins_button" href=""><img class="color" src="img/icon-insta.svg" alt="Техномарт в Инстаграм">Instagram</a></li>
         </ul>
         <p>
           <b>Обратная связь:</b>
@@ -250,5 +291,18 @@
         </p>
       </div>
     </footer>
+
+    <section class="popup_order">
+      <img src="img/icon-mark.svg" alt="">
+      <h3 class="">Товар добавлен в корзину!</h3>
+      <ul>
+        <li><a href="">Оформить заказ</a></li>
+        <li><a href="">Продолжить покупки</a></li>
+      </ul>
+      <a href="">
+        <img src="img/icon-close.svg" alt="Кнопка закрыть">
+      </a>
+    </section>
+
   </body>
 </html>
