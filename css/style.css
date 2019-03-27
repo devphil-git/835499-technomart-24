@@ -11,14 +11,6 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
 .header-logo {
   display: flex;
   align-items: center;
@@ -80,11 +72,11 @@ a {
   opacity: 0.3;
 }
 
-input:hover + .icon-search{
+input:hover + .icon-search {
   opacity: 1;
 }
 
-input:focus + .icon-search{
+input:focus + .icon-search {
   opacity: 1;
   fill: #ee3643;
 }
@@ -109,6 +101,7 @@ input:focus + .icon-search{
 .header-top-links .basket-filled {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 90px;
   padding: 12px 10px 12px 50px;
 }
@@ -175,6 +168,7 @@ input:focus + .icon-search{
 .order-button {
   display: inline-block;
   width: 110px;
+  vertical-align: middle;
   padding: 12px 20px;
   background-color: #63a63e;
 }
@@ -233,7 +227,8 @@ input:focus + .icon-search{
 }
 
 .auth-buttons a:active {
-  opacity: 0.3;
+  color: #b2b2b2;
+  fill: #b2b2b2;
 }
 
 .auth-buttons .login {
@@ -304,7 +299,8 @@ input:focus + .icon-search{
 
 .keyframes {
   width: 940px;
-  margin: 80px auto 30px;
+  padding: 0 10px;
+  margin: 60px auto 30px;
 }
 
 .keyframes-topblock {
@@ -325,28 +321,31 @@ input:focus + .icon-search{
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
-  padding: 20px 23px 15px;
+  padding: 21px 23px 13px;
   margin: 0;
 }
 
-.frame button {
+.frame a {
+  display: block;
   font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   padding: 10px;
   margin-left: 25px;
-  width: 135px;
+  width: 115px;
+  text-align: center;
   color: #ffffff;
   background-color: rgba(0,0,0,0.1);
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
-.frame button:hover {
+.frame a:hover {
   background-color: rgba(0,0,0,0.2);
 }
 
-.frame button:active {
+.frame a:active {
   background-color: rgba(0,0,0,0.3);
 }
 
@@ -360,13 +359,20 @@ input:focus + .icon-search{
   position: relative;
   width: 620px;
   height: 266px;
+}
+
+.banner1 {
   background: url(../img/layer-99.jpg) 0 0 no-repeat;
+}
+
+.banner2 {
+  background: url(../img/layer-99-2.jpg) 0 0 no-repeat;
 }
 
 .keyframes-banner h4 {
   display: block;
   font-size: 36px;
-  letter-spacing: 1.2px;
+  line-height: 36px;
   color: #ffffff;
   padding: 20px 24px 3px;
   margin: 0;
@@ -376,6 +382,7 @@ input:focus + .icon-search{
 .keyframes-banner p {
   display: block;
   font-size: 18px;
+  line-height: 24px;
   color: #ffffff;
   padding-left: 24px;
   margin: 0;
@@ -383,14 +390,20 @@ input:focus + .icon-search{
 
 .keyframes-banner .icon-left {
   position: absolute;
-  top: 115px;
-  left: 25px;
+  top: 112px;
+  left: 19px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.keyframes-banner .icon-right{
+.keyframes-banner .icon-right {
   position: absolute;
-  top: 115px;
-  right: 20px;
+  top: 112px;
+  right: 14px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .keyframes-banner .catalog-button {
@@ -398,9 +411,11 @@ input:focus + .icon-search{
   left: 26px;
   bottom: 20px;
   font-size: 14px;
+  line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
-  padding: 11px;
-  width: 195px;
+  padding: 10px;
+  width: 175px;
   color: #ffffff;
   background-color: #ee3643;
   border: none;
@@ -417,6 +432,7 @@ input:focus + .icon-search{
 }
 
 .materials {
+  background: url(../img/icon-1.svg) top 30px right 43px no-repeat;
   background-color: #ffbf47;
 }
 
@@ -427,6 +443,7 @@ input:focus + .icon-search{
 }
 
 .tools {
+  background: url(../img/icon-2.svg) top 32px right 29px no-repeat;
   background-color: #3bbce3;
 }
 
@@ -437,6 +454,7 @@ input:focus + .icon-search{
 }
 
 .tech {
+  background: url(../img/icon-3.svg) top 30px right 31px no-repeat;
   background-color: #dc91d8;
 }
 
@@ -447,6 +465,7 @@ input:focus + .icon-search{
 }
 
 .sales {
+  background: url(../img/icon-4.svg) top 25px right 45px no-repeat;
   background-color: #8ed78f;
 }
 
@@ -456,7 +475,8 @@ input:focus + .icon-search{
   right: 45px;
 }
 
-.delivery{
+.delivery {
+  background: url(../img/icon-5.svg) top 30px right 31px no-repeat;
   background-color: #ffc047;
 }
 
@@ -473,36 +493,48 @@ input:focus + .icon-search{
   position: relative;
 }
 
+.head-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 940px;
+  margin: 20px auto 1px;
+  background-color: #f9f5f0;
+}
+
+
 .head-block h2 {
   font-size: 30px;
+  line-height: 30px;
   font-weight: 400;
   padding: 30px;
   margin: 0;
   color: #32425c;
-  background-color: #f9f5f0;
   text-transform: uppercase;
 }
 
-.head-block button {
-  position: absolute;
-  top: 30px;
-  right: 25px;
+.head-block a {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 14px;
+  line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   padding: 10px;
-  width: 253px;
+  margin-right: 24px;
+  width: 233px;
   color: #ffffff;
   background-color: #ee3643;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
-.head-block button:hover {
+.head-block a:hover {
   background-color: #ca2c37
 }
 
-.head-block button:active {
+.head-block a:active {
   background-color: #ba2732
 }
 
@@ -524,10 +556,29 @@ input:focus + .icon-search{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 220px;
   height: 145px;
   outline: 1px solid #eaeaea;
   margin-bottom: 20px;
+}
+
+.interskol img {
+  position: absolute;
+  top: 20px;
+}
+
+.metabo img {
+  position: absolute;
+  top: 33px;
+}
+
+.manufacturers-block a:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturers-block a:active {
+  opacity: 0.3;
 }
 
 .services-background {
@@ -557,7 +608,7 @@ input:focus + .icon-search{
   line-height: 24px;
   width: 400px;
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .services-block {
@@ -585,18 +636,27 @@ input:focus + .icon-search{
 .services-buttons .services-item {
   display: block;
   padding: 13px 20px 18px 23px;
+  width: 240px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  text-align: left;
   color: #ffffff;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
   background-color: #32425c;
+  border: none;
+  cursor: pointer;
 }
 
 .services-buttons .service-current {
   color: #32425c;
   background-color: #ffffff;
   box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+}
+
+.services-buttons .services-item:hover {
+  color: #ffffff;
+  background-color: #293449;
 }
 
 .services .services-image {
@@ -630,13 +690,13 @@ input:focus + .icon-search{
 
 .about p {
   font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;;
+  font-size: 13px;
   line-height: 24px;
-  margin: 25px 0 20px 0;
+  margin: 26px 0 20px 0;
 }
 
 .about ul {
-  font-size: 18px;;
+  font-size: 18px;
   line-height: 20px;
   list-style: none;
   padding-left: 37px;
@@ -657,7 +717,7 @@ input:focus + .icon-search{
 }
 
 .button-red {
-  font-size: 14px;;
+  font-size: 14px;
   line-height: 18px;
   color: #ffffff;
   background-color: #ee3643;
@@ -717,7 +777,7 @@ input:focus + .icon-search{
   background: url(../img/icon-home.svg) no-repeat 0 0;
 }
 
-.breadcrumbs li::after{
+.breadcrumbs li::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -747,6 +807,7 @@ input:focus + .icon-search{
   justify-content: space-between;
   align-items: flex-start;
   width: 940px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -762,7 +823,7 @@ input:focus + .icon-search{
 .goods-container .headline {
   display: block;
   width: 100%;
-  padding: 10px 10px 10px 20px;;
+  padding: 10px 10px 10px 20px;
   margin: 0;
   background-color: #f7f3ec;
   border-radius: 5px;
@@ -836,7 +897,7 @@ input:focus + .icon-search{
   left: 21px;
 }
 
-.range-controls .max-toggle{
+.range-controls .max-toggle {
   left: 161px;
 }
 
@@ -876,7 +937,6 @@ input:focus + .icon-search{
   border-bottom-width: 0;
 }
 
-
 .filters fieldset {
   padding: 0;
   margin: 0;
@@ -889,7 +949,7 @@ input:focus + .icon-search{
   line-height: 30px;
   text-transform: uppercase;
   width: 100%;
-  padding: 15px 0 0 0;
+  padding: 16px 0 0 0;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -910,6 +970,15 @@ input:focus + .icon-search{
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filters label:hover {
+  color: #b5b5b5;
+}
+
+.filters label:active {
+  color: #e9e9e9;
 }
 
 .filter-checkbox + label::before {
@@ -955,7 +1024,7 @@ input:focus + .icon-search{
 .filters button {
   width: 140px;
   height: 35px;
-  margin-top: 60px;
+  margin-top: 59px;
   cursor: pointer;
 }
 
@@ -982,7 +1051,7 @@ input:focus + .icon-search{
   margin-right: 9px;
 }
 
-.pagination-list a:last-of-type{
+.pagination-list a:last-of-type {
   width: 118px;
   padding: 0 10px;
   margin-right: 10px;
@@ -997,14 +1066,13 @@ input:focus + .icon-search{
 }
 
 .infoblock {
-  width: 1200px;
   background-color: #f4f7f9;
 }
 
 .perforator-info {
   width: 940px;
   margin: 0 auto;
-  padding: 55px 0 68px;
+  padding: 54px 0 67px;
 }
 
 .perforator-info h2 {
@@ -1051,10 +1119,18 @@ input:focus + .icon-search{
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 220px;
   height: 68px;
   background-color: #ee3643;
   box-shadow: inset 0 -5px 0 rgba(0,0,0,0.24);
+}
+
+
+.footer-logo svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-middle ul {
@@ -1109,10 +1185,10 @@ input:focus + .icon-search{
 
 .popup-letter {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  top: 2300px;
+  top: 20%;
 }
 
 .popup-raise {
@@ -1225,10 +1301,10 @@ input:focus + .icon-search{
   display: none;
   margin: 0 auto;
   width: 940px;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  bottom: -2000px;
+  top: 20%;
 }
 
 .popup-map img {
@@ -1242,10 +1318,10 @@ input:focus + .icon-search{
 .popup-order {
   display: none;
   flex-wrap: wrap;
-  position: absolute;
+  position: fixed;
+  top: 20%;
   left: 0;
   right: 0;
-  bottom: 300px;
 }
 
 .popup-order-raise {
@@ -1273,18 +1349,18 @@ input:focus + .icon-search{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 35px 80px;
+  padding: 35px 79px;
   margin: 0;
   list-style: none;
   background-color: #f1f1f1;
 }
 
-.popup-order .button-red{
+.popup-order .button-red {
   width: 220px;
   margin-right: 20px;
 }
 
-.popup-order .button-white{
+.popup-order .button-white {
   width: 220px;
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 14px;
@@ -1310,10 +1386,10 @@ input:focus + .icon-search{
 /* ----- Стили сетки ----- */
 
 
-body {
+/*body {
   width: 1200px;
   margin: 0 auto;
-}
+}*/
 
 .top-block {
   width: 100%;
@@ -1322,17 +1398,14 @@ body {
 }
 
 .middle-block {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-  width: 100%;
+  min-height: 278px;
   background-color: #f1f5f7;
 }
 
 .header-top,
 .header-middle {
   width: 940px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -1366,7 +1439,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 46px;
+  padding-top: 46px;
 }
 
 .header-middle .sitename {
@@ -1387,6 +1460,7 @@ body {
   display: inline-block;
   position: relative;
   width: 100%;
+  vertical-align: middle;
   padding: 12px 0 12px 75px;
   outline: 3px solid #ffffff;
   outline-offset: -3px
@@ -1454,9 +1528,10 @@ padding-top: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 18px;
   width: 300px;
-  margin: 7px 5px 0;
+  margin: 9px 6px 0;
   padding: 0;
 }
 
@@ -1479,11 +1554,7 @@ padding-top: 5px;
 
 .header-navigation {
   width: 940px;
-  margin: 37px auto 40px;
-}
-
-.pad {
-  margin-bottom: 60px;
+  margin: 37px auto 20px;
 }
 
 .nav-container {
@@ -1495,26 +1566,27 @@ padding-top: 5px;
   padding: 0;
   margin: 0;
   font-size: 17px;
+  line-height: 17px;
 }
 
 .nav-container a {
   display: block;
-  padding: 17px 30px 15px;
+  padding: 21px 30px 17px;
 }
 
 .nav-container li:first-of-type a {
-  padding: 17px 30px 15px 55px;
+  padding: 21px 34px 17px 51px;
 }
 
 .nav-container li:last-of-type a {
-  padding: 17px 55px 15px 30px;
+  padding: 21px 55px 17px 30px;
 }
 
 .about {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 50px 0 45px;
+  margin: 50px 0 44px;
 }
 
 .company {
@@ -1644,38 +1716,37 @@ padding-top: 5px;
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.new-goods {
+.new-goods::after {
+  content: "";
   position: absolute;
   right: 0;
+  top: 0;
   width: 60px;
   height: 60px;
   background: url(../img/new.png) no-repeat 0 0;
-  text-indent: -10000px;
   z-index: 20; 
 }
 
 .goods-name {
-  width: 160px;
-  margin: 8px auto 15px;
-  text-align: center;
-}
-
-.goods-name a {
+  display: block;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  line-height: 18px;
+  width: 160px;
+  margin: 6px auto 11px;
+  text-align: center;
   color: #000000;
 }
 
-.goods-name:hover a {
+.goods-name:hover {
   text-decoration: underline;
 }
 
 .price-old {
   min-height: 20px;
-  margin: 13px auto 5px;
+  margin: 0 0 8px 5px;
+  line-height: 20px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -1684,22 +1755,19 @@ padding-top: 5px;
   text-decoration: line-through;
 }
 
-.price-current {
-  margin: 7px auto 20px;
-}
-
-.price-current:hover a,
-.price-current:hover a:after {
+.price-current:hover,
+.price-current:hover::after {
   background-color: #ca2c37;
   border-left-color: #ca2c37;
 }
 
-.price-current a {
+.price-current {
   display: inline-block;
   position: relative;
   width: 100px;
+  vertical-align: middle;
   padding: 10px 20px;
-  margin-left: 5px;
+  margin: 0 0 21px 5px;
   color: #ffffff;
   background-color: #ee3643;
   font-family: 'PT Sans', Arial, sans-serif;
@@ -1709,7 +1777,7 @@ padding-top: 5px;
   border-radius: 3px;
 }
 
-.price-current a:after {
+.price-current::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1780,6 +1848,7 @@ padding-top: 5px;
 
 .footer-top-container {
   width: 940px;
+  padding: 0 10px;
   height: 195px;
   margin: auto;
   background-color: #32425c;
@@ -1888,7 +1957,13 @@ padding-top: 5px;
   margin-right: 10px;
 }
 
-
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
 
 
