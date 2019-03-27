@@ -502,7 +502,6 @@ input:focus + .icon-search {
   background-color: #f9f5f0;
 }
 
-
 .head-block h2 {
   font-size: 30px;
   line-height: 30px;
@@ -511,6 +510,24 @@ input:focus + .icon-search {
   margin: 0;
   color: #32425c;
   text-transform: uppercase;
+}
+
+.head-block h2:nth-of-type(n+2) {
+  display: none;
+}
+
+.popular-goods h2 {
+  display: block;
+  max-width: 233px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.manufacturers h2 {
+  display: block;
+  max-width: 337px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .head-block a {
@@ -556,22 +573,12 @@ input:focus + .icon-search {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 220px;
   height: 145px;
   outline: 1px solid #eaeaea;
   margin-bottom: 20px;
 }
 
-.interskol img {
-  position: absolute;
-  top: 20px;
-}
-
-.metabo img {
-  position: absolute;
-  top: 33px;
-}
 
 .manufacturers-block a:hover {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -659,14 +666,9 @@ input:focus + .icon-search {
   background-color: #293449;
 }
 
-.services .services-image {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 .services-description {
   padding: 20px 80px;
+  position: relative;
 }
 
 .services-description h3 {
@@ -678,14 +680,57 @@ input:focus + .icon-search {
   text-transform: uppercase;
 }
 
-.services-description p:first-of-type {
+.services-description p:nth-of-type(n+3) {
+  display: none;
+}
+
+.delivery-desc p:first-of-type {
   width: 280px;
   margin: 0;
 }
 
-.services-description p:last-of-type {
+.delivery-desc p:last-of-type {
   width: 200px;
   margin: 0;
+}
+
+.warranty-desc p:first-of-type {
+  width: 360px;
+  margin: 0;
+}
+
+.warranty-desc p:last-of-type {
+  width: 230px;
+  margin: 0;
+}
+
+.credit-desc p {
+  width: 290px;
+  margin: 0;
+}
+
+.credit-desc a {
+  width: 135px;
+  padding: 0 30px;
+  margin-top: 30px;
+}
+
+.services-description .services-image {
+  position: absolute;
+  top: 64px;
+  left: 231px;
+}
+
+.services-description .warranry-image {
+  position: absolute;
+  top: 40px;
+  left: 310px;
+}
+
+.services-description .credit-image {
+  position: absolute;
+  top: 40px;
+  left: 240px;
 }
 
 .about p {
@@ -1189,6 +1234,20 @@ input:focus + .icon-search {
   left: 0;
   right: 0;
   top: 20%;
+  animation: left-to-right 0.5s;
+  -webkit-animation: left-to-right 0.5s;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translate(-3000px, 0);
+    -webkit-transform: translate(-3000px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+  }
 }
 
 .popup-raise {
@@ -1305,6 +1364,8 @@ input:focus + .icon-search {
   left: 0;
   right: 0;
   top: 20%;
+  animation: left-to-right 0.5s;
+  -webkit-animation: left-to-right 0.5s;
 }
 
 .popup-map img {
@@ -1322,6 +1383,8 @@ input:focus + .icon-search {
   top: 20%;
   left: 0;
   right: 0;
+  animation: left-to-right 0.5s;
+  -webkit-animation: left-to-right 0.5s;
 }
 
 .popup-order-raise {
@@ -1391,9 +1454,7 @@ input:focus + .icon-search {
   margin: 0 auto;
 }*/
 
-.top-block {
-  width: 100%;
-  height: 42px;
+.header {
   background-color: #293449;
 }
 
@@ -1443,8 +1504,8 @@ input:focus + .icon-search {
 }
 
 .header-middle .sitename {
-  width: 200px;
-  padding: 3px 48px 0 52px;
+  width: 198px;
+  padding: 3px 48px 0 53px;
 }
 
 .phone-container {
@@ -1582,6 +1643,10 @@ padding-top: 5px;
   padding: 21px 55px 17px 30px;
 }
 
+.nav-container li:nth-of-type(n+8) {
+  display: none;
+}
+
 .about {
   display: flex;
   justify-content: center;
@@ -1643,7 +1708,8 @@ padding-top: 5px;
   align-items: center;
 }
 
-.headline .list-by {
+.headline .list-by,
+.headline .sort-buttons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1664,14 +1730,19 @@ padding-top: 5px;
   margin-left: 63px;
 }
 
-.list-by li:nth-of-type(4) {
-  margin-left: 48px;
+.list-by li:nth-of-type(n+4) {
+  display: none;
 }
 
-.list-by li:nth-of-type(5) {
-  margin-left: 20px;
-  fill: #c5c5c5;
+.headline .sort-buttons {
+  margin-left: 28px;
+  padding: 0;
 }
+
+.sort-buttons li {
+  margin-left: 20px;
+}
+
 
 .list-by .by-price {
   color: #ee3643;
@@ -1964,6 +2035,4 @@ padding-top: 5px;
   height: 1px;
   margin: -1px;
 }
-
-
 
